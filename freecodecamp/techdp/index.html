@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en_US">
+
+<head>
+	
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+	
+	<title>Technical Documentation Page</title>
+	<meta name="description" content="">
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<!-- Images and favicon -->
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="img/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+	<link rel="manifest" href="img/favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<!-- End of images and favicon -->
+	
+	<!-- Custom Browsers Color Start -->
+	<meta name="theme-color" content="#000">
+	<!-- End of Custom Browsers Color Start -->
+	
+	<link rel="stylesheet" href="css/main.min.css">
+	
+</head>
+
+<body>
+	
+	<!-- Content -->
+	
+	<div class="container">
+		<div class="row">
+			
+			<div class="col-md-4">
+				<nav id="navbar">
+					<header class="navbar-header">Documentation</header>
+					<ul class="nav">
+						<a class="nav-link" href="#FLEXBOX">
+							<li>Flexbox</li>
+						</a>
+						<a class="nav-link" href="#Why_Flexbox">
+							<li>Why Flexbox</li>
+						</a>
+						<a class="nav-link" href="#Introducing_example">
+							<li>Introducing example</li>
+						</a>
+						<a class="nav-link" href="#Specifying_elements">
+							<li>Specifying elements</li>
+						</a>
+						<a class="nav-link" href="#An_aside_on_the_flex_model">
+							<li>An aside on the flex model</li>
+						</a>
+						<a class="nav-link" href="#Columns_or_rows">
+							<li>Columns or rows</li>
+						</a>
+						<a class="nav-link" href="#Wrapping">
+							<li>Wrapping</li>
+						</a>
+					</ul>
+				</nav>
+			</div>
+			
+			<div class="col-md-8">
+				<main id="main-doc">
+					
+					<section class="main-section" id="FLEXBOX">
+						<header class="main-section__headline main-section__headline--1">FLEXBOX</header>
+						<p class="lead">
+							<strong>
+								Flexbox is a one-dimensional layout method for laying out items in rows or columns. Items flex to fill additional space and shrink to fit into smaller spaces. This article explains all the fundamentals.
+							</strong>
+						</p>
+					</section>
+					
+					<section class="main-section" id="Why_Flexbox">
+						<header class="main-section__headline">Why Flexbox</header>
+						<p>For a long time, the only reliable cross browser-compatible tools available for creating CSS layouts were things like floats and positioning. These are fine and they work, but in some ways they are also rather limiting and frustrating.</p>
+						<p>The following simple layout requirements are either difficult or impossible to achieve with such tools, in any kind of convenient, flexible way:</p>
+						<ul>
+							<li>Vertically centering a block of content inside its parent.</li>
+							<li>Making all the children of a container take up an equal amount of the available width/height, regardless of how much width/height is available.</li>
+							<li>Making all columns in a multiple column layout adopt the same height even if they contain a different amount of content.</li>
+						</ul>
+						<p>As you'll see in subsequent sections, flexbox makes a lot of layout tasks much easier. Let's dig in!</p>
+					</section>
+					
+					<section class="main-section" id="Introducing_example">
+						<header class="main-section__headline">
+							Introducing example
+						</header>
+						<p>In this article we are going to get you to work through a series of exercises to help you understand how flexbox works. To get started, you should make a local copy of the first starter file — <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox0.html" target="_blank">flexbox0.html</a> from our github repo — load it in a modern browser (like Firefox or Chrome), and have a look at the code in your code editor. You can <a href="http://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox0.html" target="_blank">see it live here</a> also.</p>
+						<p>You'll see that we have a <code>header</code> element with a top level heading inside it, and a <code>section</code> element containing three <code>article</code>. We are going to use these to create a fairly standard three column layout.</p> 
+						<img src="img/flexbox-example1.png" alt="Flexbox1" class="img-responsive">
+					</section>
+					
+					<section class="main-section" id="Specifying_elements">
+						<header class="main-section__headline">
+							Specifying elements
+						</header>
+						<p>
+							To start with, we need to select which elements are to be laid out as flexible boxes. To do this, we set a special value of <code>display</code> on the parent element of the elements you want to affect. IывЫВЫВАЫВАn this case we want to lay out the <code>article</code> elements, so we set this on the <code>section</code> (which becomes a flex container):
+						</p>
+						<pre>
+							<code class="main-section__code">
+								section {
+									display: flex;
+								}
+							</code>
+						</pre>
+						<p>The result of this should be something like so:</p>
+						<img src="img/flexbox-example2.png" alt="Flexbox2" class="img-responsive">
+						<p>So, this single declaration gives us everything we need — incredible, right? We have our multiple column layout with equal sized columns, and the columns are all the same height. This is because the default values given to flex items (the children of the flex container) are set up to solve common problems such as this. More on those later.</p>
+					</section>
+					
+					<section class="main-section" id="An_aside_on_the_flex_model">
+						<header class="main-section__headline">An aside on the flex model</header>
+						<p>When elements are laid out as flexible boxes, they are laid out along two axes:</p>
+						<img src="img/flex_terms.png" alt="Flex Terms" class="img-responsive">
+						<ul>
+							<li>The main axis is the axis running in the direction the flex items are being laid out in (e.g. as rows across the page, or columns down the page.) The start and end of this axis are called the main start and main end.</li>
+							<li>The cross axis is the axis running perpendicular to the direction the flex items are being laid out in. The start and end of this axis are called the cross start and cross end.</li>
+							<li>The parent element that has <code>display: flex</code> set on it (the <code>section</code> in our example) is called the flex container.</li>
+							<li>The items being laid out as flexible boxes inside the flex container are called flex items (the <code>article</code> elements in our example).</li>
+						</ul>
+						<p>Bear this terminology in mind as you go through subsequent sections. You can always refer back to it if you get confused about any of the terms being used.</p>
+					</section>
+					
+					<section class="main-section" id="Columns_or_rows">
+						<header class="main-section__headline">
+							Columns or rows
+						</header>
+						<p>Flexbox provides a property called <code>flex-direction</code> that specifies what direction the main axis runs in (what direction the flexbox children are laid out in) — by default this is set to row, which causes them to be laid out in a row in the direction your browser's default language works in (left to right, in the case of an English browser).</p>
+						<p>Try adding the following declaration to your section rule:</p>
+						<pre>
+							<code class="main-section__code">
+								flex-direction: column;
+							</code>
+						</pre>
+						<p>You'll see that this puts the items back in a column layout, much like they were before we added any CSS. Before you move on, delete this declaration from your example.</p>
+					</section>
+					
+					<section class="main-section" id="Wrapping">
+						<header class="main-section__headline">
+							Wrapping
+						</header>
+						<p>One issue that arises when you have a fixed amount of width or height in your layout is that eventually your flexbox children will overflow their container, breaking the layout. Have a look at our <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox-wrap0.html" target="_blank">flexbox-wrap0.html</a> example, and try <a href="http://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox-wrap0.html" target="_blank">viewing it live</a> (take a local copy of this file now if you want to follow along with this example):</p>
+						<img src="img/flexbox-example3.png" alt="3" class="img-responsive">
+						<pre>
+							<code class="main-section__code">
+								flex-wrap: wrap;
+							</code>
+						</pre>
+					</section>
+					
+					<!-- <div class="main-section">
+						<header>
+							<h2 class="main-section__headline"></h2>
+						</header>
+						<p></p>
+					</div> -->
+					
+					
+				</main>
+			</div>
+			
+		</div>
+	</div>
+	
+	<footer id="main-footer">
+		
+	</footer>
+	
+	
+	<script src="https://gitcdn.link/repo/freeCodeCamp/testable-projects-fcc/master/build/bundle.js"></script>
+	
+</body>
+</html>
