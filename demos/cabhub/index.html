@@ -37,8 +37,7 @@
 	<!-- End of Custom Browsers Color Start -->
 
 	<!-- <link rel="stylesheet" href="css/main.min.css"> -->
-	<link rel="stylesheet" href="css/main.min.css" media="none" onload="if(media!='all')media='all'">
-
+	<link rel="preload" href="css/main.min.css" as="style" onload="this.rel='stylesheet'">
 </head>
 
 <body>
@@ -86,7 +85,7 @@
 					</div>
 
 					<div class="row">
-						 <div class="col wow bounceInUp">
+						 <div class="col">
 								 <img class="main-header__img img-responsive" src="img/car-hero.png">
 						 </div>
 					</div>
@@ -111,7 +110,7 @@
 					<button class="buttons buttons--dark"><span>Read more</span></button>
 				</div>
 
-				<div class="col-xl-4 col-lg-5 col-md-10 m-md-auto wow slideInRight">
+				<div class="col-xl-4 col-lg-5 col-md-10 m-md-auto">
 					<form class="forms">
 
 						<div class="forms__headline-wrap ">
@@ -166,7 +165,7 @@
 					</div>
 				</div>
 						<div class="row cards-wrap">
-							<div class="col-lg-4 col-md-6 col-sm-8 cards-wrap__item wow slideInLeft">
+							<div class="col-lg-4 col-md-6 col-sm-8 cards-wrap__item">
 								<div class="card" id="card1">
 									<img src="img/car-tariff.png" alt="car tariff" class="card__top-car img-responsive">
 
@@ -182,7 +181,7 @@
 									<img src="img/star-angle.png" alt="star" class="card__star">
 								</div>
 							</div>
-							<div class="col-lg-4 col-md-6 col-sm-8 cards-wrap__item wow slideInUp">
+							<div class="col-lg-4 col-md-6 col-sm-8 cards-wrap__item">
 								<div class="card" id="card2">
 									<img src="img/car-tariff.png" alt="car tariff" class="card__top-car img-responsive">
 
@@ -200,7 +199,7 @@
 
 								</div>
 							</div>
-							<div class="col-lg-4 col-md-6 col-sm-8 cards-wrap__item wow slideInRight">
+							<div class="col-lg-4 col-md-6 col-sm-8 cards-wrap__item">
 								<div class="card" id="card3">
 									<img src="img/car-tariff.png" alt="car tariff" class="card__top-car img-responsive">
 
@@ -238,7 +237,7 @@
 
 			<div class="row s-feature__wrap">
 
-				<div class="col-lg-6 wow fadeInUp data-wow-delay:"1s"">
+				<div class="col-lg-6">
 					
 					<div class="feature">
 						<div class="feature__icon">
@@ -251,7 +250,7 @@
 					</div>
 
 				</div>
-				<div class="col-lg-6 wow fadeInUp data-wow-delay:"1s" ">
+				<div class="col-lg-6">
 					
 					<div class="feature">
 						<div class="feature__icon">
@@ -264,7 +263,7 @@
 					</div>
 
 				</div>
-				<div class="col-lg-6 wow fadeInUp data-wow-delay:"2s" ">
+				<div class="col-lg-6">
 					
 					<div class="feature">
 						<div class="feature__icon">
@@ -277,7 +276,7 @@
 					</div>
 
 				</div>
-				<div class="col-lg-6 wow fadeInUp data-wow-delay:"2s" ">
+				<div class="col-lg-6">
 					
 					<div class="feature">
 						<div class="feature__icon">
@@ -291,7 +290,7 @@
 
 				</div>
 
-				<button class="buttons buttons--yellow wow fadeInUp data-wow-delay:"2s""><span>Read More</span></button>
+				<button class="buttons buttons--yellow"><span>Read More</span></button>
 			</div>
 		</div>
 	</section>		
@@ -312,7 +311,7 @@
 
 			<div class="row s-app__wrap">
 				
-				<div class="col-xl-5 mr-xl-auto app col-lg-8 wow slideInLeft data-wow-delay:"1s"">
+				<div class="col-xl-5 mr-xl-auto app col-lg-8">
 						<p class="lead-p">Download the Cab voucher app free!<br> Get Exciting New Offers</p>
 						<p>Quisque sollicitudin feugiat risus, eu posuere ex euismod eu. Phasellus hendrerit, massa efficitur.</p>
 						<div class="app__links">
@@ -351,7 +350,7 @@
 		</div>
 
 		<div class="row s-testimonial__wrap justify-content-center">
-			<div class="col-lg-6 col-md-12 wow fadeInLeft data-wow-delay="1s"">
+			<div class="col-lg-6 col-md-12">
 				<div class="testimonial">
 					<div class="testimonial__content">
 						<p>Quisque sollicitudin feugiat risus, eu posuere ex euismod eu. Phasellus hendrerit, massa efficitur.Quisque sollicitudin feugiat risus.</p>
@@ -365,7 +364,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-lg-6 col-md-12 wow fadeInRight data-wow-delay="1s"">
+			<div class="col-lg-6 col-md-12">
 				<div class="testimonial">
 					<div class="testimonial__content">
 						<p>Quisque sollicitudin feugiat risus, eu posuere ex euismod eu. Phasellus hendrerit, massa efficitur.Quisque sollicitudin feugiat risus.</p>
@@ -391,7 +390,7 @@
 
 		<div class="container">
 
-			<div class="row justify-content-center wow bounceInUp data-wow-delay="1s" ">
+			<div class="row justify-content-center">
 
 				<div class="col-md-10 col-sm-12 m-auto">
 					<div class="headline">
