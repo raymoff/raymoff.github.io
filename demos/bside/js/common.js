@@ -44,6 +44,5 @@ $(function() {
 			
 		};
 
-	// Smooth scroll to id
-	let scroll = new SmoothScroll('a[data-scroll]');
+
 });
