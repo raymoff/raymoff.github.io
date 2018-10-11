@@ -1,4 +1,4 @@
-$(function() {
+$(function () {
 
 	// FilpClock
 	var clock;
@@ -6,7 +6,7 @@ $(function() {
 		clockFace: 'DailyCounter',
 		autoStart: true,
 		callbacks: {
-			stop: function() {
+			stop: function () {
 				$('message').html('The conference is going on!');
 			}
 		}
@@ -24,25 +24,41 @@ $(function() {
 
 
 
-	$('.toggle-mnu').click(function() {
+	$('.toggle-mnu').click(function () {
 		$(this).toggleClass('on');
 		$('.my-menu__nav').slideToggle();
 	});
 
 	// Stop image drag
-  $("img, a").on("dragstart", function (event) {
+	$("img, a").on("dragstart", function (event) {
 		event.preventDefault();
 	});
 
-		//Chrome Smooth Scroll
-		try {
-			$.browserSelector();
-			if($("html").hasClass("chrome")) {
-				$.smoothScroll();
-			}
-		} catch(err) {
-			
-		};
+	//Chrome Smooth Scroll
+	try {
+		$.browserSelector();
+		if ($("html").hasClass("chrome")) {
+			$.smoothScroll();
+		}
+	} catch (err) {
 
+	};
+
+	$(window).scroll(function() {
+		if ($(this).scrollTop() > $(this).height()) {
+			$('.top-btn').addClass('active');
+		} else {
+			$('.top-btn').removeClass('active');
+		}
+	});
+
+	$('.top-btn').click(function () { 
+		$('html, body').stop().animate({scrollTop: 0}, 'slow', 'swing');
+	 });
+	 
+
+	$(window).on('load', function () {
+		$('.preloader').delay(1200).fadeOut('slow');
+	});
 
 });
