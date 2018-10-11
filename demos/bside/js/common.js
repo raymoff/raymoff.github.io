@@ -55,10 +55,7 @@ $(function () {
 	$('.top-btn').click(function () { 
 		$('html, body').stop().animate({scrollTop: 0}, 'slow', 'swing');
 	 });
-	 
 
-	$(window).on('load', function () {
-		$('.preloader').delay(1200).fadeOut('slow');
-	});
+
 
 });
