@@ -1,0 +1,278 @@
+@import "vars";
+@import "fonts";
+@import "libs";
+
+::placeholder {
+	color: #666;
+}
+
+::selection {
+	background-color: $accent;
+	color: $bg-color;
+}
+
+body {
+	background-color: $bg-color;
+	font-size: 16px;
+	min-width: 320px;
+	position: relative;
+	line-height: 1.65;
+	font-family: $default-font;
+	overflow-x: hidden;
+  color: $text;
+  
+	input, textarea {
+		border: #666 1px solid;
+		outline: none;
+		&:focus:required:invalid {
+			border-color: red;
+		}
+		&:required:valid {
+			border-color: green;
+		}
+	}
+}
+
+.img-responsive {
+	display: block;
+	max-width: 100%;
+  height: auto;
+  
+	&.img-width {
+		width: 100%;
+	}
+}
+
+.text-center {
+	text-align: center;
+}
+
+b, strong {
+	font-weight: bold;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "XoloniumBold", sans-serif;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+a {
+  color: $link;
+  transition: all .2s ease;
+  &:hover, &:focus {
+    color: lighten($color: $link, $amount: 8%);
+  }
+}
+
+.button {
+	display: inline-block;
+	border: none;
+	color: $dark;
+	text-decoration: none;
+	background-color: $accent;
+  padding: 10px 40px;
+  font-family: "XoloniumBold", sans-serif;
+	font-size: 16px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	border-radius: 15px;
+	text-align: center;
+	position: relative;
+	outline: none;
+	transition: background-color .1s ease;
+	cursor: pointer;
+
+	&::after {
+		transition: background-color .2s ease;
+		position: absolute;
+		content: '';
+		height: 4px;
+		bottom: 0;
+		width: 100%;
+		background-color: darken($accent, 50%);
+		opacity: .18;
+		border-bottom-left-radius: 2px;
+		border-bottom-right-radius: 2px;
+		left: 0;
+	}
+
+	&:focus, &:hover {
+		text-decoration: none;
+		color: $dark;
+	}
+
+	&:hover {
+		background-color: lighten($accent, 5%);
+		&::after {
+			opacity: .22;
+		}
+	}
+
+	&:active {
+		background-color: darken($accent, 5%);
+		&::after {
+			opacity: .32;
+		}
+		}
+
+}
+
+
+header {
+  position: relative;
+}
+  // NAVIGATION
+  .navbar {
+    background-color: #131313;
+    padding: 1.5rem 2rem;
+    font-family: "XoloniumRegular", sans-serif;
+    text-transform: uppercase;
+
+    .navbar-brand {
+        font-family: "XoloniumBold", sans-serif;
+        background-image: linear-gradient(to right, rgb(202, 0, 0), rgb(78, 255, 78), rgb(243, 30, 243));
+        background-clip: text;
+        color: transparent;
+      }
+    
+
+    .navbar-nav {
+
+      .nav-item {
+        &.active>a,
+        &.active>a:hover,
+        &.active>a:focus {
+          background-color: $accent;
+          border-radius: .5em;
+          color: $bg-color;
+        }
+      }
+
+      .nav-link {
+        padding: 5px 9px;
+        color: $accent;
+        margin: 0 7px;
+    
+        &:last-child {
+          margin: 0 0 0 7px;
+        }
+        }
+      }
+
+    }
+
+
+.main-wrapper {
+  
+  background-image: linear-gradient(rgba($dark, .35)), url("../img/main-bg.jpeg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 200px 0;
+  width: 100%;
+  position: relative;
+
+  &__rectangle {
+    position: absolute;
+    background: linear-gradient(to bottom, rgba(0, 4, 249, 0.6), rgba(197, 0, 0, 0.6));
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 32%;
+    height: 100%;
+  }
+
+  &__circle {
+    background-color: $dark;
+    border-radius: 50%;
+    width: 420px;
+    height: 420px;
+    border: 10px $accent solid;
+    text-align: center;
+    position: relative;
+  }
+
+  &__inner-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    height: 75%;
+    border-radius: 50%;
+  }
+
+  &__photo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 20px $accent solid;
+    border-radius: 50%
+  }
+
+  &__text-block {
+    span {
+      text-transform: uppercase;
+      color: $accent;
+    }
+  }
+
+  &__icons {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .icon {
+      background-color: $accent;
+      position: relative;
+      width: 85px;
+      height: 85px;
+      border-radius: 50%;
+      &:not(:last-child) {
+        margin-bottom: 25px; 
+      }
+
+      img {
+        margin: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 60%;
+        height: auto;
+        transition: all .5s ease-in-out;
+        &:hover {
+          transform: rotate(360deg);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  border-top: 2px$accent solid;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  
+  .copywright {
+    margin: auto;
+  }
+}
+
+
+
+
+
+@import "media"; // Always at the end
