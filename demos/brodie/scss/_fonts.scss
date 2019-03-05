@@ -1,0 +1,6 @@
+@import "_mixins/font-face";
+
+@include font-face("XoloniumBold", "../fonts/XoloniumBold/XoloniumBold");
+@include font-face("XoloniumRegular", "../fonts/XoloniumRegular/XoloniumRegular");
+@include font-face("RobotoBold", "../fonts/RobotoBold/RobotoBold", bold);
+@include font-face("RobotoRegular", "../fonts/RobotoRegular/RobotoRegular");
